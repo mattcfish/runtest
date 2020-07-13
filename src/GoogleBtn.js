@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 
 const CLIENT_ID =
-  "668016801050-ldsbcqiqdgqlrd721aqolc2eo33eqvv5.apps.googleusercontent.com";
+  "633285765773-9m4014i95eb4nrq4176lanvk92iigael.apps.googleusercontent.com";
 
 class GoogleBtn extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class GoogleBtn extends Component {
     if (response.accessToken) {
       this.setState(state => ({
         isLogined: true,
-        accessToken: response.accessToken
+        accessToken: JSON.stringify(response, null, 2)
       }));
     }
   }
